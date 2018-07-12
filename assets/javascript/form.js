@@ -1,10 +1,10 @@
 var $zipCode = $("#zipCode");
 var $houseIncome = $("#houseIncome");
-var $militaryExpierence = $("#militaryExpierence");
+var $militaryService = $("#militaryService");
 var $PTSD = $("#PTSD");
 var $areaHelp = $("#areaHelp");
 var $healthIssues = $("#healthIssues");
-var $debt = $("#debt");
+var $debtAmount = $("#debtAmount");
 var $rent = $("#rent");
 var $addiction = $("#addiction");
 var $jobLoss = $("#jobLoss");
@@ -16,7 +16,7 @@ var $submitButton = $("#submitButton");
 var totalRiskScore;
 
 $submitButton.on("click", function() {
-    if($militaryExpierence.val() === "Yes") {
+    if($militaryService.val() === "Yes") {
         totalRisk++;
     }
 
@@ -37,7 +37,7 @@ $submitButton.on("click", function() {
         totalRisk = totalRisk + 2;
     }
 
-    if($debt.val() === "Yes") {
+    if($debtAmount.val() === "Yes") {
         totalRisk = totalRisk + 2;
     }
 
