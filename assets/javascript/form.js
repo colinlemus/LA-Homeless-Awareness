@@ -15,7 +15,8 @@ var $victimCrime = $("#victimCrime");
 var $submitButton = $("#submitButton");
 var totalRiskScore;
 
-$submitButton.on("click", function() {
+$submitButton.on("click", function(event) {
+    event.preventDefault();
     if($militaryService.val() === "Yes") {
         totalRisk++;
     }
