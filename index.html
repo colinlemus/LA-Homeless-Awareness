@@ -1,30 +1,157 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
-    <body>
-        <div class="jumbotron jumbotron-fluid font-weight-bold text-center border-bottom">
-                <h1>Know Your Risk LA</h1>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card-header text-center font-weight-bold border">
-                        <div>Map</div>
-                    </div>
-                    <div class="card-body border-left border-bottom border-right">
-                        <div id="cartoMap"></div>
-                    </div>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid font-weight-bold text-center border-bottom">
+        <h1>Know Your Risk LA</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-header text-center font-weight-bold border">
+                    <div>Map</div>
+                </div>
+                <div class="card-body border-left border-bottom border-right">
+                    <div id="cartoMap"></div>
                 </div>
             </div>
         </div>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="formControlInput1">Zip code</label>
+                <input type="number" class="form-control" id="zipCode" placeholder="90045">
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">What is your estimated level of household income?</label>
+                <select class="form-control" id="houseIncome">
+                    <option></option>
+                    <option>Range 1</option>
+                    <option>Range 2</option>
+                    <option>Range 3</option>
+                    <option>Range 4</option>
+                    <option>Range 5</option>
+                    <option>Range 6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">1. Did you serve in the US military or elsewhere?</label>
+                <select class="form-control" id="militaryService">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">2. Do you suffer from PTSD related to your time spent in military service?</label>
+                <select class="form-control" id="ifYesTo#1">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">3. Do you agree with the following statement: "I have no one in the area to help me out."?</label>
+                <select class="form-control" id="doYouAgree">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">4. Are you or your immediate family suffering from any long-term or serious health issues?</label>
+                <select class="form-control" id="familySuffering">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">5. Do you have a lot of debt or find it difficult to pay your bills?</label>
+                <select class="form-control" id="debtAmount">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">6. Did you recently start renting after previously owning a house?</label>
+                <select class="form-control" id="rentingOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">7. Do you suffer from substance addiction?</label>
+                <select class="form-control" id="drugsOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">8. Did you recently lose your job, are in danger of losing your job, or switched to a lower paying job?</label>
+                <select class="form-control" id="jobOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">9. Do you suffer from mental health issues?</label>
+                <select class="form-control" id="mentalHealthIssuesOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">10. Have you ever been homeless?</label>
+                <select class="form-control" id="homelessOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">11. Have you ever been in foster care?</label>
+                <select class="form-control" id="fosterCareOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="formControlSelect1">12. Have you ever been a victim of a crime?</label>
+                <select class="form-control" id="crimeVictimOrNah">
+                    <option></option>
+                    <option>Yes</option>
+                    <option>No</option>
+                    <option>Prefer not to answer</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
         <script src="https://code.jquery.com/jquery.js"></script>
         <script type="text/javascript" src="assets/javascript/api.js"></script>
-		<script type="text/javascript" src="assets/javascript/utilities.js"></script>
-		<script type="text/javascript" src="assets/javascript/other.js"></script>
-    </body>
+        <script type="text/javascript" src="assets/javascript/utilities.js"></script>
+        <script type="text/javascript" src="assets/javascript/other.js"></script>
+</body>
 </html>
