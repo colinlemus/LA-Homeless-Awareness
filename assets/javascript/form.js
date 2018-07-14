@@ -1,5 +1,3 @@
-var $zipCode = $("#zipCode");
-var $houseIncome = $("#houseIncome");
 var $militaryService = $("#militaryService");
 var $PTSD = $("#PTSD");
 var $areaHelp = $("#areaHelp");
@@ -16,70 +14,57 @@ var $submitButton = $("#submitButton");
 var totalRiskScore;
 
 $submitButton.on("click", function(event) {
-    event.preventDefault();
-    if($militaryService.val() === "Yes") {
+	event.preventDefault();
+    if($militaryService.val() == 0) {
+        totalRiskScore++;
+	}
+
+    if($areaHelp.val() == 0) {
+        totalRiskScore++;
+	}
+	
+    if($healthIssues.val() == 0) {
+        totalRiskScore++;
+	}
+	
+    if($fosterCare.val() == 0) {
+        totalRiskScore++;
+	}
+	
+    if($victimCrime.val() == 0) {
         totalRiskScore++;
     }
 
-    if($areaHelp.val() === "") {
-        totalRiskScore++;
-    }
-    if($healthIssues.text() === "Yes") {
-        totalRiskScore++;
-    }
-    if($fosterCare.val() === "Yes") {
-        totalRiskScore++;
-    }
-    if($victimCrime.val() === "Yes") {
-        totalRiskScore++;
-    }
-
-    if($PTSD.val() === "Yes") {
+    if($PTSD.val() == 0) {
     	totalRiskScore = totalRiskScore + 2;
     }
 
-    if($debtAmount.val() === "Yes") {
+    if($debtAmount.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($rent.val() === "Yes") {
+    if($rent.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($addiction.val() === "Yes") {
+    if($addiction.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($jobLoss.val() === "Yes") {
+    if($jobLoss.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($mentalHealthIssues.val() === "Yes") {
-        totalRisk = totalRisk + 2;
+    if($mentalHealthIssues.val() == 0) {
+        totalRiskScore = totalRiskScore + 2;
     }
 
-    if($homeless.val() === "Yes") {
+    if($homeless.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
 	}
 
-	var zipCodeQueryURL = "https://services5.arcgis.com/7nsPwEMP38bSkCjy/arcgis/rest/services/LAIDP/FeatureServer/0/query?outFields=F7indicato&where=Zip_Code=" + $zipCode.val();
-	var censusQueryURL = "https://api.census.gov/data/2014/acs5?get=B19013_001E&for=zip%20code%20tabulation%20area:" + $zipCode.val() + "&key=0b143a7eba1f8162e05b434ad926bc86a293e59b";
-   
-	$.ajax({
-		url: zipCodeQueryURL,
-		method: "GET"
-	}).then(function(response) {
-		console.log(response);
-	});
-
-	$.ajax({
-		url: censusQueryURL,
-		method: "GET"
-	}).then(function(response) {
-		console.log(response);
-	});
+	pullInformation();
 });
-
 
 function onStart() {
     totalRiskScore = 0;
