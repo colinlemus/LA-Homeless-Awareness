@@ -5,7 +5,6 @@
 .jumbotron {
     font-family: "Bungee Inline";
     color: white;
-    background-image: url("../images/capturing-LA.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -16,7 +15,7 @@ h1 {
 }
 
 body {
-    background-color: #F0F8FF;
+    /* background-color: #F0F8FF; */
     margin-bottom: 1%;
 }
 

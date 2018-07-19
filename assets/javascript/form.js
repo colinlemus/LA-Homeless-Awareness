@@ -14,17 +14,11 @@ var $victimCrime = $("#victimCrime");
 var $submitButton = $("#submitButton");
 var totalRiskScore;
 
-<<<<<<< HEAD
 $submitButton.on("click", function(event) {
     event.preventDefault();
     pullInformation();
     
     if($militaryService.val() == 0) {
-=======
-$submitButton.on("click", function (event) {
-    event.preventDefault();
-    if ($militaryService.val() == 0) {
->>>>>>> f6ee7252e7dc5b219e0bcb42cac02d36af75f258
         totalRiskScore++;
     }
 
@@ -71,7 +65,6 @@ $submitButton.on("click", function (event) {
     if ($homeless.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
-<<<<<<< HEAD
 
     if($houseIncome.val() < averageIncome) {
         totalRiskScore = totalRiskScore + 3;
@@ -114,10 +107,6 @@ $submitButton.on("click", function (event) {
     }
 
     console.log(totalRiskScore);
-=======
-
-    pullInformation();
->>>>>>> f6ee7252e7dc5b219e0bcb42cac02d36af75f258
 });
 
 // 20-26 Very High
