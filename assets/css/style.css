@@ -1,8 +1,9 @@
 .overflow-hidden {
     overflow: hidden;
 }
+
 .jumbotron {
-    font-family: 'Bungee Inline', cursive;
+    font-family: "Bungee Inline";
     color: white;
     background-image: url("capturing-LA.jpg");
     background-repeat: no-repeat;
