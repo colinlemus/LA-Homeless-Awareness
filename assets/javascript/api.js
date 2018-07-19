@@ -43,7 +43,6 @@ function zipCode(response) {
             
             averageScore = averageScore + LADIP.attributes.F7indicato;
             averageAmount++;
-            console.log(LADIP.attributes.F7indicato);
         } 
     }
 }
