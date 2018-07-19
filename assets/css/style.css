@@ -3,7 +3,8 @@
 }
 
 .jumbotron {
-    font-family: 'Bungee Inline', cursive;
+    font-family: "Bungee Inline";
+    color: white;
     background-image: url("../images/capturing-LA.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -11,7 +12,7 @@
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 48px;
 }
 
 body {
