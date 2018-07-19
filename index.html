@@ -1,149 +1,224 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Know Your Risk LA</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
 
-    <body>
-        <div class="jumbotron jumbotron-fluid font-weight-bold text-center border-bottom">
-            <h1 class="border text-center" style="background-color:white; color: black;">Know Your Risk LA</h1>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card-header text-center font-weight-bold border">
-                        <div>Major Risk Factors</div>
-                    </div>
-                    <div class="card-body border-left border-bottom border-right">
-                        <form>
-                            <div class="form-group">
-                                <label for="formControlInput1">Zip code</label>
-                                <input type="number" class="form-control" id="zipCode" placeholder="90045">
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">What is your estimated level of household income?</label>
-                                <input type="number" class="form-control" id="houseIncome" placeholder="59039">
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">1. Did you serve in the US military or elsewhere?</label>
-                                <select class="form-control" id="militaryService">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">2. Do you suffer from PTSD related to your time spent in military service?</label>
-                                <select class="form-control" id="PTSD">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">3. Do you agree with the following statement: "I have no one in the area to help me out."?</label>
-                                <select class="form-control" id="areaHelp">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">4. Are you or your immediate family suffering from any long-term or serious health issues?</label>
-                                <select class="form-control" id="healthIssues">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">5. Do you have a lot of debt or find it difficult to pay your bills?</label>
-                                <select class="form-control" id="debtAmount">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">6. Did you recently start renting after previously owning a house?</label>
-                                <select class="form-control" id="rent">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">7. Do you suffer from substance addiction?</label>
-                                <select class="form-control" id="addiction">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">8. Did you recently lose your job, are in danger of losing your job, or switched to a lower paying job?</label>
-                                <select class="form-control" id="jobLoss">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">9. Do you suffer from mental health issues?</label>
-                                <select class="form-control" id="mentalHealthIssues">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">10. Have you ever been homeless?</label>
-                                <select class="form-control" id="homeless">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">11. Have you ever been in foster care?</label>
-                                <select class="form-control" id="fosterCare">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlSelect1">12. Have you ever been a victim of a crime?</label>
-                                <select class="form-control" id="victimCrime">
-                                    <option value="null"></option>
-                                    <option value="0">Yes</option>
-                                    <option value="1">No</option>
-                                </select>
-                            </div>
-                            <button type="submit" id="submitButton">Submit</button>
-                        </form>
+<head>
+    <title>Know Your Risk LA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" charset="UTF-8"/>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid font-weight-bold text-center border-bottom">
+        <h1 class="border text-center" style="background-color:#F0F8FF; color: black;">Know Your Risk LA</h1>
+    </div>
+    <div class="container caroContainer">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-header text-center font-weight-bold border">
+                    <div>Faces On Our Streets</div>
+                </div>
+                <div class="card-body border-left border-bottom border-right">
+                    <div class="pictureCarousel">
+                        <div>
+                            <img class="caroImages" src="assets/images/image1.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image2.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image3.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image4.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image5.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image6.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image7.png" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image9.jpg" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image10.jpg" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image11.jpg" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image12.jpg" />
+                        </div>
+                        <div>
+                            <img class="caroImages" src="assets/images/image13.jpg" />
+                        </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-12">
-                    <div class="card-header text-center font-weight-bold border">
-                        <div>Map</div>
-                    </div>
-                    <div class="card-body border-left border-bottom border-right">
-                        <div class="embed-container overflow-hidden">
-                            <iframe width="1070" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Know Your Risk LA" src="https://bootcamp.maps.arcgis.com/apps/Embed/index.html?webmap=a6d661279969496fb5a5bbababdefd1c&extent=-119.085,33.6965,-117.7391,34.3453&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&legend=true&disable_scroll=true&theme=light"></iframe>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card-header text-center font-weight-bold border">
+                    <div>Major Risk Factors</div>
+                </div>
+                <div class="card-body border-left border-bottom border-right">
+                    <form>
+                        <div class="form-group">
+                            <label for="formControlInput1">Zip code</label>
+                            <input type="number" class="form-control" id="zipCode" placeholder="90045">
                         </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">What is your estimated level of household income?</label>
+                            <select class="form-control" id="houseIncome">
+                                <option></option>
+                                <option value="0">Single: $9,525, Married: $19,050</option>
+                                <option value="1">Single: $9,526 - $38,700, Married: $19,051 - $77,400</option>
+                                <option value="2">Single: $38,701 - $82,500, Married: $77,401 - $165,000</option>
+                                <option value="3">Single: $82,501 - $157,500, Married: $165,001 - $315,000</option>
+                                <option value="4">Single: $157,501 - $200,000, Married: $315,001 - $400,000</option>
+                                <option value="5">Single: $200,001 - $500,000, Married: $400,001 - $600,000</option>
+                                <option value="6">Single: over $500,000, Married: over $600,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">1. Did you serve in the US military or elsewhere?</label>
+                            <select class="form-control" id="militaryService">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">2. Do you suffer from PTSD related to your time spent in military service?</label>
+                            <select class="form-control" id="PTSD">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">3. Do you agree with the following statement: "I have no one in the area to help me out."?</label>
+                            <select class="form-control" id="areaHelp">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">4. Are you or your immediate family suffering from any long-term or serious health issues?</label>
+                            <select class="form-control" id="healthIssues">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">5. Do you have a lot of debt or find it difficult to pay your bills?</label>
+                            <select class="form-control" id="debtAmount">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">6. Did you recently start renting after previously owning a house?</label>
+                            <select class="form-control" id="rent">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">7. Do you suffer from substance addiction?</label>
+                            <select class="form-control" id="addiction">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">8. Did you recently lose your job, are in danger of losing your job, or switched to a lower paying
+                                job?
+                            </label>
+                            <select class="form-control" id="jobLoss">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">9. Do you suffer from mental health issues?</label>
+                            <select class="form-control" id="mentalHealthIssues">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">10. Have you ever been homeless?</label>
+                            <select class="form-control" id="homeless">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">11. Have you ever been in foster care?</label>
+                            <select class="form-control" id="fosterCare">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formControlSelect1">12. Have you ever been a victim of a crime?</label>
+                            <select class="form-control" id="victimCrime">
+                                <option></option>
+                                <option value="0">Yes</option>
+                                <option value="1">No</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="submitButton">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <div class="card-header text-center font-weight-bold border">
+                    <div>Map</div>
+                </div>
+                <div class="card-body border-left border-bottom border-right">
+                    <div class="embed-container overflow-hidden">
+                        <iframe width="1070" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Know Your Risk LA"
+                            src="https://bootcamp.maps.arcgis.com/apps/Embed/index.html?webmap=a6d661279969496fb5a5bbababdefd1c&extent=-119.085,33.6965,-117.7391,34.3453&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&legend=true&disable_scroll=true&theme=light"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
         <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
         <script type="text/javascript" src="assets/javascript/utilities.js"></script>
         <script type="text/javascript" src="assets/javascript/api.js"></script>
         <script type="text/javascript" src="assets/javascript/form.js"></script>
-    </body>
-</html>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.pictureCarousel').slick({
+                    dots: true,
+                    autoplay: true,
+                });
+            });
+        </script>
+
+</body>
+
+</html

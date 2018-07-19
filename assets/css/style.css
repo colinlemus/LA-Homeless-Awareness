@@ -5,16 +5,22 @@
 .jumbotron {
     font-family: "Bungee Inline";
     color: white;
-    background-image: url("capturing-LA.jpg");
+    background-image: url("../images/capturing-LA.jpg");
     background-repeat: no-repeat;
     background-position: center center;
 
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 48px;
 }
 
 body {
     background-color: #F0F8FF;
+    margin-bottom: 1%;
+}
+
+.caroImages {
+    height: 400px;
+    margin: auto;
 }

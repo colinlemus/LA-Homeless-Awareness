@@ -14,57 +14,64 @@ var $victimCrime = $("#victimCrime");
 var $submitButton = $("#submitButton");
 var totalRiskScore;
 
+<<<<<<< HEAD
 $submitButton.on("click", function(event) {
     event.preventDefault();
     pullInformation();
     
     if($militaryService.val() == 0) {
-        totalRiskScore++;
-	}
-
-    if($areaHelp.val() == 0) {
-        totalRiskScore++;
-	}
-	
-    if($healthIssues.val() == 0) {
-        totalRiskScore++;
-	}
-	
-    if($fosterCare.val() == 0) {
-        totalRiskScore++;
-	}
-	
-    if($victimCrime.val() == 0) {
+=======
+$submitButton.on("click", function (event) {
+    event.preventDefault();
+    if ($militaryService.val() == 0) {
+>>>>>>> f6ee7252e7dc5b219e0bcb42cac02d36af75f258
         totalRiskScore++;
     }
 
-    if($PTSD.val() == 0) {
-    	totalRiskScore = totalRiskScore + 2;
+    if ($areaHelp.val() == 0) {
+        totalRiskScore++;
     }
 
-    if($debtAmount.val() == 0) {
+    if ($healthIssues.val() == 0) {
+        totalRiskScore++;
+    }
+
+    if ($fosterCare.val() == 0) {
+        totalRiskScore++;
+    }
+
+    if ($victimCrime.val() == 0) {
+        totalRiskScore++;
+    }
+
+    if ($PTSD.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($rent.val() == 0) {
+    if ($debtAmount.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($addiction.val() == 0) {
+    if ($rent.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($jobLoss.val() == 0) {
+    if ($addiction.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($mentalHealthIssues.val() == 0) {
+    if ($jobLoss.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
 
-    if($homeless.val() == 0) {
+    if ($mentalHealthIssues.val() == 0) {
         totalRiskScore = totalRiskScore + 2;
     }
+
+    if ($homeless.val() == 0) {
+        totalRiskScore = totalRiskScore + 2;
+    }
+<<<<<<< HEAD
 
     if($houseIncome.val() < averageIncome) {
         totalRiskScore = totalRiskScore + 3;
@@ -107,6 +114,10 @@ $submitButton.on("click", function(event) {
     }
 
     console.log(totalRiskScore);
+=======
+
+    pullInformation();
+>>>>>>> f6ee7252e7dc5b219e0bcb42cac02d36af75f258
 });
 
 // 20-26 Very High
