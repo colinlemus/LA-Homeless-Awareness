@@ -179,8 +179,8 @@ function totalRiskChecks() {
     console.log(($zipCode.val().substr(1, 1) == 1) || $zipCode.val().substr(1, 1) == 0);
     if($zipCode.val() == "null"
     || $zipCode.val().length != "5" 
-    || $zipCode.val() != "90001"
-    || $zipCode.val() != "90002" 
+    || $zipCode.val()[0] != "9" 
+    // || ($zipCode.val()[1] >= "0" && $zipCode.val()[1] <= "1")) {
     ) {
         $("#zipCodeDiv").html("* You must fill out this part of the form, or enter a zip code in Los Angeles.").css({
             "color": "red",
@@ -191,7 +191,7 @@ function totalRiskChecks() {
         $("#zipCodeDiv").html("");
     }
 
-    if($houseIncome.val() == "null") {
+    if($houseIncome.val().length < 1) {
         $("#houseIncomeDiv").html("* You must fill out this part of the form.").css({
             "color": "red",
             "margin-bottom": 12
