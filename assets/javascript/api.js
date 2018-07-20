@@ -1,6 +1,5 @@
 var $zipCode = $("#zipCode");
 var $houseIncome = $("#houseIncome");
-var containZip_Code = false;
 var averageIncome;
 var LADIPScore;
 var averageAmount = 0;
@@ -29,11 +28,6 @@ function pullInformation() {
     });
 
     LADIPScore = (averageScore / averageAmount);
-    console.log(averageAmount);
-    console.log(averageScore);
-    console.log(LADIPScore);
-    console.log(averageIncome);
-    console.log(isNaN(LADIPScore));
     if(isNaN(LADIPScore)) {
         $(".level-risk").removeClass("display-none");
         $("#total-risk-level").append("There is not enough data to accurately calculate your LADIP Score with your zip code.");
@@ -44,7 +38,6 @@ function zipCode(response) {
     for(var i = 0; i < response.features.length; i++) {
         var LADIP = response.features[i];
         if($zipCode.val() == LADIP.attributes.Zip_Code) {
-            containZip_Code = true;
             if(LADIP.attributes.F7indicato == 0) {
                 return;
             }
@@ -54,9 +47,3 @@ function zipCode(response) {
         } 
     }
 }
-
-//.377> + 4
-//.284 - .377 + 3
-//.203 - .284 + 2
-//.162 - .203 + 1
-//.162< 0
