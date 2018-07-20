@@ -96,15 +96,8 @@ $submitButton.on("click", function(event) {
         }
 
         $submitButton.addClass("display-none");
-        console.log(totalRiskScore);
     }
 });
-
-// 20-26 Very High
-// 15-19 High
-// 10-14 Moderate
-// 4-9 Low
-// 0-3 Very Low 
 
 function totalRiskValues() {
     if($militaryService.val() == 0) {
@@ -177,10 +170,6 @@ function totalRiskValues() {
 }
 
 function totalRiskChecks() {
-    console.log($zipCode.val() == "null");
-    console.log($zipCode.val().length);
-    console.log(($zipCode.val().substr(1, 1)));
-    console.log(($zipCode.val().substr(1, 1) == 1) || $zipCode.val().substr(1, 1) == 0);
     if($zipCode.val() == "90001"
     || $zipCode.val() == "90002" 
     || $zipCode.val() == "90003"
