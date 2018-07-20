@@ -33,6 +33,11 @@ function pullInformation() {
     console.log(averageScore);
     console.log(LADIPScore);
     console.log(averageIncome);
+    console.log(isNaN(LADIPScore));
+    if(isNaN(LADIPScore)) {
+        $(".level-risk").removeClass("display-none");
+        $("#total-risk-level").append("There is not enough data to accurately calculate your LADIP Score with your zip code.");
+    }
 }
 
 function zipCode(response) {
