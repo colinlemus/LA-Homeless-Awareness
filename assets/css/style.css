@@ -23,3 +23,7 @@ body {
     height: 400px;
     margin: auto;
 }
+
+.display-none {
+    display: none;
+}

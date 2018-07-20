@@ -1,5 +1,6 @@
 var $zipCode = $("#zipCode");
 var $houseIncome = $("#houseIncome");
+var containZip_Code = false;
 var averageIncome;
 var LADIPScore;
 var averageAmount = 0;
@@ -31,12 +32,14 @@ function pullInformation() {
     console.log(averageAmount);
     console.log(averageScore);
     console.log(LADIPScore);
+    console.log(averageIncome);
 }
 
 function zipCode(response) {
     for(var i = 0; i < response.features.length; i++) {
         var LADIP = response.features[i];
         if($zipCode.val() == LADIP.attributes.Zip_Code) {
+            containZip_Code = true;
             if(LADIP.attributes.F7indicato == 0) {
                 return;
             }
