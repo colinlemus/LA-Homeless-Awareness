@@ -15,7 +15,6 @@ function pullInformation() {
         async: false
     }).then(function(response) {
         averageIncome = response[1][0];
-        console.log(response);
     });
 
     $.ajax({
