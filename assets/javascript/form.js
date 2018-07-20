@@ -26,55 +26,65 @@ $submitButton.on("click", function(event) {
             $(".level-risk").removeClass("display-none");
             $newDiv1 = $("<div>");
             $newDiv2 = $("<div>");
-            $newDiv1.html("Please refer to any links provided as they will help protect you from displacement by getting you the help you need for any of the questions you answered 'Yes' to.");
-            $newDiv2.html("You have a very high risk of being displaced from you home.").css({
+            $newDiv3 = $("<div>");
+            $newDiv1.html("Based on the information provided, the risk of displacement from your home is:");
+            $newDiv2.html("VERY HIGH").css({
                 "color": "red"
             });
-            $("#total-risk-level").append($newDiv1, $newDiv2);
+            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
         if(totalRiskScore < 20 && totalRiskScore >= 15) {
             $(".level-risk").removeClass("display-none");
             $newDiv1 = $("<div>");
             $newDiv2 = $("<div>");
-            $newDiv1.html("Please refer to any links provided as they will help protect you from displacement by getting you the help you need for any of the questions you answered 'Yes' to.");
-            $newDiv2.html("You have a high risk of being displaced from you home.").css({
+            $newDiv3 = $("<div>");
+            $newDiv1.html("Based on the information provided, the risk of displacement from your home is:");
+            $newDiv2.html("HIGH").css({
                 "color": "#F08080"
             });
-            $("#total-risk-level").append($newDiv1, $newDiv2);
+            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }    
 
         if(totalRiskScore < 15 && totalRiskScore >= 10) {
             $(".level-risk").removeClass("display-none");
             $newDiv1 = $("<div>");
             $newDiv2 = $("<div>");
-            $newDiv1.html("Please refer to any links provided as they will help protect you from displacement by getting you the help you need for any of the questions you answered 'Yes' to.");
-            $newDiv2.html("You have a moderate risk of being displaced from you home.").css({
+            $newDiv3 = $("<div>");
+            $newDiv1.html("Based on the information provided, the risk of displacement from your home is:");
+            $newDiv2.html("MODERATE").css({
                 "color": "#ECDD00"
             });
-            $("#total-risk-level").append($newDiv1, $newDiv2);
+            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
         if(totalRiskScore < 10 && totalRiskScore >= 4) {
             $(".level-risk").removeClass("display-none");
             $newDiv1 = $("<div>");
             $newDiv2 = $("<div>");
-            $newDiv1.html("Please refer to any links provided as they will help protect you from displacement by getting you the help you need for any of the questions you answered 'Yes' to.");
-            $newDiv2.html("You have a low risk of being displaced from you home.").css({
+            $newDiv3 = $("<div>");
+            $newDiv1.html("Based on the information provided, the risk of displacement from your home is:");
+            $newDiv2.html("LOW").css({
                 "color": "green"
             });
-            $("#total-risk-level").append($newDiv1, $newDiv2);
+            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
         if(totalRiskScore < 4) {
             $(".level-risk").removeClass("display-none");
             $newDiv1 = $("<div>");
             $newDiv2 = $("<div>");
-            $newDiv1.html("Please refer to any links provided as they will help protect you from displacement by getting you the help you need for any of the questions you answered 'Yes' to.");
-            $newDiv2.html("You have a very low risk of being displaced from you home.").css({
+            $newDiv3 = $("<div>");
+            $newDiv1.html("Based on the information provided, the risk of displacement from your home is:");
+            $newDiv2.html("VERY LOW").css({
                 "color": "#98FB98"
             });
-            $("#total-risk-level").append($newDiv1, $newDiv2);
+            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
         $submitButton.addClass("display-none");
@@ -424,11 +434,11 @@ function answeredYes() {
         $newDiv1.html("<a href='http://dmh.lacounty.gov/wps/portal/dmh'>http://dmh.lacounty.gov/wps/portal/dmh</a>");
         $newDiv2.html("<a href='https://www.mentalhealth.gov/get-help/immediate-help'>https://www.mentalhealth.gov/get-help/immediate-help</a>");
         $newDiv3.html("<a href='https://www.mentalhealth.gov/talk/people-mental-health-problems'>https://www.mentalhealth.gov/talk/people-mental-health-problems</a>");
-        $("#mentalHealthIsssuesDiv").append($newDiv1, $newDiv2, $newDiv3).css({
+        $("#mentalHealthIssuesDiv").append($newDiv1, $newDiv2, $newDiv3).css({
             "margin-bottom": 12
         });
     } else {
-        $("#mentalHealthIsssuesDiv").html("");
+        $("#mentalHealthIssuesDiv").html("");
     }
 
     if($homeless.val() == 0) {
