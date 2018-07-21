@@ -35,7 +35,7 @@ $submitButton.on("click", function(event) {
             $newDiv2.html("VERY HIGH").css({
                 "color": "red"
             });
-            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $newDiv3.html("Please refer to any of the links above to connect with helpful resources available in your area.");
             $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
@@ -49,7 +49,7 @@ $submitButton.on("click", function(event) {
             $newDiv2.html("HIGH").css({
                 "color": "#F08080"
             });
-            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $newDiv3.html("Please refer to any of the links above to connect with helpful resources available in your area.");
             $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }    
 
@@ -63,7 +63,7 @@ $submitButton.on("click", function(event) {
             $newDiv2.html("MODERATE").css({
                 "color": "#ECDD00"
             });
-            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $newDiv3.html("Please refer to any of the links above to connect with helpful resources available in your area.");
             $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
@@ -77,7 +77,7 @@ $submitButton.on("click", function(event) {
             $newDiv2.html("LOW").css({
                 "color": "green"
             });
-            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $newDiv3.html("Please refer to any of the links above to connect with helpful resources available in your area.");
             $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
@@ -91,7 +91,7 @@ $submitButton.on("click", function(event) {
             $newDiv2.html("VERY LOW").css({
                 "color": "#98FB98"
             });
-            $newDiv3.html("Please refer to any of the following links to connect with helpful resources available in your area.");
+            $newDiv3.html("Please refer to any of the links above to connect with helpful resources available in your area.");
             $("#total-risk-level").append($newDiv1, $newDiv2, $newDiv3);
         }
 
