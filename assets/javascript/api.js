@@ -27,7 +27,10 @@ function pullInformation() {
     });
 
     LADIPScore = (averageScore / averageAmount);
+    console.log()
+    console.log(LADIPScore);
     if(isNaN(LADIPScore)) {
+        $("#total-risk-level").html("");
         $(".level-risk").removeClass("display-none");
         $("#total-risk-level").append("There is not enough data to accurately calculate your LADIP Score with your zip code.");
     }
